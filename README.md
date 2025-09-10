@@ -120,7 +120,7 @@ docker run -d \
 
 ```
 
-<!-- ## Notes
+## Notes
 
 - Make sure to replace placeholders (e.g., `your_username`, `your_password`, `your_database`) with your actual MySQL configuration.
 
@@ -128,7 +128,7 @@ docker run -d \
 
 - Be cautious when executing SQL queries directly. Validate and sanitize user inputs to prevent vulnerabilities like SQL injection.
 
-- If you encounter issues, check Docker logs and error messages for troubleshooting. -->
+- If you encounter issues, check Docker logs and error messages for troubleshooting.
 
 ```
 
