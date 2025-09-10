@@ -1,4 +1,3 @@
- 
 # Flask App with MySQL Docker Setup
 
 This is a simple Flask app that interacts with a MySQL database. The app allows users to submit messages, which are then stored in the database and displayed on the frontend.
@@ -55,7 +54,7 @@ Before you begin, make sure you have the following installed:
 3. Create the `messages` table in your MySQL database:
 
    - Use a MySQL client or tool (e.g., phpMyAdmin) to execute the following SQL commands:
-   
+
      ```sql
      CREATE TABLE messages (
          id INT AUTO_INCREMENT PRIMARY KEY,
@@ -76,21 +75,24 @@ To stop and remove the Docker containers, press `Ctrl+C` in the terminal where t
 docker-compose down
 ```
 
-## To run this two-tier application using  without docker-compose
+## To run this two-tier application using without docker-compose
 
 - First create a docker image from Dockerfile
+
 ```bash
 docker build -t flaskapp .
 ```
 
 - Now, make sure that you have created a network using following command
+
 ```bash
 docker network create twotier
 ```
 
 - Attach both the containers in the same network, so that they can communicate with each other
 
-i) MySQL container 
+i) MySQL container
+
 ```bash
 docker run -d \
     --name mysql \
@@ -102,7 +104,9 @@ docker run -d \
     mysql:5.7
 
 ```
+
 ii) Backend container
+
 ```bash
 docker run -d \
     --name flaskapp \
@@ -116,7 +120,7 @@ docker run -d \
 
 ```
 
-## Notes
+<!-- ## Notes
 
 - Make sure to replace placeholders (e.g., `your_username`, `your_password`, `your_database`) with your actual MySQL configuration.
 
@@ -124,10 +128,11 @@ docker run -d \
 
 - Be cautious when executing SQL queries directly. Validate and sanitize user inputs to prevent vulnerabilities like SQL injection.
 
-- If you encounter issues, check Docker logs and error messages for troubleshooting.
+- If you encounter issues, check Docker logs and error messages for troubleshooting. -->
 
 ```
 
 # two-tier-flask-app
 # devops-fa1
 # devops-fa1
+```
